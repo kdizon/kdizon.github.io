@@ -58,13 +58,13 @@
     }
 
     a {
-      color: #1772d0;
+      color: #36618e;
       text-decoration: none;
     }
 
     a:hover, a:focus {
-      color: #f09228;
-      text-decoration: none;
+      text-decoration: underline;
+      text-underline-offset: 3px;
     }
 
     strong,
@@ -108,10 +108,50 @@
     .fade {
       transition: opacity .2s ease-in-out;
     }
+
+    /* Mobile: stack the header and each publication row vertically */
+    @media (max-width: 640px) {
+      .profile > tbody > tr {
+        display: flex;
+        flex-direction: column-reverse;
+      }
+
+      .profile > tbody > tr > td {
+        display: block !important;
+        width: auto !important;
+        padding: 12px 20px !important;
+      }
+
+      .profile img {
+        width: 180px;
+        display: block;
+        margin: 0 auto;
+      }
+
+      tr:has(> td .one) {
+        display: block;
+        padding: 20px;
+        border-top: 1px solid #e4e7e8;
+      }
+
+      tr:has(> td .one) > td {
+        display: block !important;
+        width: auto !important;
+        padding: 0 !important;
+      }
+
+      tr:has(> td .one) > td:first-child {
+        margin-bottom: 16px;
+      }
+
+      tr:has(> td .one) .one {
+        height: auto;
+      }
+    }
   </style>
 </head>
 <body>
-  <table border="0" align="center" cellspacing="0" cellpadding="20">
+  <table class="profile" border="0" align="center" cellspacing="0" cellpadding="20">
     <tr>
       <td style="width:63%; vertical-align:middle;">
         <p><name>Kevin Keomanee-Dizon</name></p>
@@ -179,7 +219,7 @@
            </td>
            <td style="padding:20px;width:75%;vertical-align:middle">
   <!-- title -->
-  <a href="https://arxiv.org/abs/2511.09462">
+  <a href="https://doi.org/10.1038/s41467-026-78668-6">
   <papertitle>Depth-enhanced molecular imaging with two-photon oblique plane microscopy</papertitle></a><br>
   <!-- authors -->
   <strong>K Keomanee-Dizon</strong>,
@@ -192,7 +232,8 @@
   <a href="https://toettcherlab.scholar.princeton.edu/bio">JT Toettcher</a>,
   <a href="https://syndevbio.org/principal-investigator/">HM McNamara</a><br>
   <!-- publication status and links -->
-  arXiv:2511.09462 (2025) <br>
+  <em>Nature Communications</em> (2026) <br>
+  <a href="https://arxiv.org/abs/2511.09462">arXiv:2511.09462 (2025)</a><br>
   <p></p>
   <!-- project description -->
   <p>We combine high-numerical-aperture single-objective detection with multiphoton plane illumination to resolve subcellular and single-molecule dynamics deep in multicellular systems through standard coverglass.</p>
@@ -276,7 +317,7 @@
   <a href="https://bioimaging.usc.edu/sefraser.html">SE Fraser</a>,
   <a href="https://scholar.google.com/citations?user=iLGAA0MAAAAJ&hl=en">TV Truong</a><br>
   <!-- publication status and links -->
-  <em>Applied Physics Letters</em> <b>121</b>, 163701 (2022) <br>
+  <em>Applied Physics Letters</em> 121, 163701 (2022) <br>
   <a href="https://arxiv.org/abs/2206.00141">
    arXiv:2206.00141 (2022)</a><br>
   <p></p>
@@ -319,12 +360,8 @@
   <a href="https://bioimaging.usc.edu/sefraser.html">SE Fraser</a>,
   <a href="https://viterbi.usc.edu/directory/faculty/Cutrale/Francesco">F Cutrale</a><br>
   <!-- publication status and links -->
-  <em>Cell Reports Methods</em> <b>3</b>, 100441 (2023) <br>
+  <em>Cell Reports Methods</em> 3, 100441 (2023) <br>
   <a href="https://www.nature.com/articles/s41592-023-01921-z"><em>Nature Methods</em> Research Highlight</a> &nbsp|&nbsp
-  <a href="https://today.usc.edu/pictures-inside-a-cell-usc-researchers-develop-new-tool-to-provide-greater-insight-into-biological-processes/">
-     USC News</a> &nbsp|&nbsp
-  <a href="https://phys.org/news/2023-03-pictures-cell-tool-greater-insight.html">
-     Phys.org</a> &nbsp|&nbsp
   <a href="https://doi.org/10.21203/rs.3.rs-1582252/v1">Research Square (2022)</a><br>
   <p></p>
   <!-- project description -->
@@ -367,12 +404,9 @@
     <a href="https://bioimaging.usc.edu/sefraser.html">SE Fraser</a>,
     <a href="https://scholar.google.com/citations?user=iLGAA0MAAAAJ&hl=en">TV Truong</a><br>
     <!-- publication status and links -->
-    <em>Optics Letters</em> <b>46</b>, 2860-2863 (2021) <br>
+    <em>Optics Letters</em> 46, 2860-2863 (2021) <br>
     <a href="https://scienceandtechnology.jpl.nasa.gov/sites/default/files/documents/JPL_2020_Technology_Highlights.pdf">
       NASA's JPL 2020 Technology Highlights</a> &nbsp|&nbsp
-    <a href="https://app.oxfordabstracts.com/events/1717/sessions/15082/download">
-     12th Light Sheet Fluorescence
-       Microscopy Conference 2020</a> &nbsp|&nbsp
        <a href="https://arxiv.org/abs/2010.00644">arXiv:2010.00644 (2020)</a><br>
     <p></p>
     <!-- project description -->
@@ -412,7 +446,7 @@
     <a href="https://bioimaging.usc.edu/sefraser.html">SE Fraser</a>,
     <a href="https://scholar.google.com/citations?user=iLGAA0MAAAAJ&hl=en">TV Truong</a><br>
     <!-- publication status and links -->
-    <em>Review of Scientific Instruments</em> <b>91</b>, 053703 (2020) <br>
+    <em>Review of Scientific Instruments</em> 91, 053703 (2020) <br>
     <a href="https://www.biorxiv.org/content/10.1101/801688v3">bioRxiv:801688 (2019)</a><br>
     <p></p>
     <!-- project description -->
@@ -456,7 +490,7 @@
   <a href="http://www.glowingsquid.org/">M McFall-Ngai</a>,
   <a href="https://bioimaging.usc.edu/sefraser.html">SE Fraser</a><br>
   <!-- publication status and links -->
-  <em>Communications Biology</em> <b>3</b>, 1-8 (2020) <br>
+  <em>Communications Biology</em> 3, 1-8 (2020) <br>
   <a href="https://www.nature.com/articles/s41592-020-0812-1"><em>Nature Methods</em> In Brief</a> &nbsp|&nbsp
   <a href="https://www.biorxiv.org/content/10.1101/403303v1">bioRxiv:403303 (2018)</a><br>
   <p></p>
@@ -467,7 +501,6 @@
   </td></tr>
   <!-- project end -->
 
-  <tr><td colspan="2" style="padding:0 20px 20px 20px; font-size:12px; color:#666;">*, <sup>1</sup> Equal contribution</td></tr>
 
 	</table>
 	<!-- end of research section -->
